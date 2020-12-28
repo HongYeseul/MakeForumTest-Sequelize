@@ -9,7 +9,7 @@ module.exports = class user extends Sequelize.Model {
      */
     static associate(db) {
       // define association here
-      db.User.hasMany(db.Comment, {foreignKey : 'commenter', sourrceKey : 'id'});
+      db.User.hasMany(db.Comment, {foreignKey : 'commenter', sourceKey : 'id'});
     }
 
     static init(sequelize){

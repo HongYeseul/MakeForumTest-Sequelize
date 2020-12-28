@@ -9,7 +9,7 @@ module.exports = class comment extends Sequelize.Model {
      */
     static associate(db) {
       // define association here
-      db.Comment.belongsTo(db.User, {foreighKey: 'commenter', targetKey : 'id'});
+      // db.Comment.belongsTo(db.User, {foreignKey: 'commenter', targetKey : 'id'});
     }
 
     static init(sequelize){
@@ -17,6 +17,9 @@ module.exports = class comment extends Sequelize.Model {
         comment: {
           type: Sequelize.STRING(100),
           allowNull:false
+        },
+        commenter : {
+          type: Sequelize.INTEGER
         }
       },
       {
